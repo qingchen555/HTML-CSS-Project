@@ -17,13 +17,13 @@
                <input type="text" placeholder="username" /> 
                <input type="password" placeholder="Password" /> 
                <input type="submit" value="Login" /> 
-               <p class="signup"> don't have an account? <a href="#">Sign up.</a></p>
+               <p class="signup"> don't have an account? <a href="#" onclick="toggleForm();">Sign up.</a></p>
             </form>
           </div>
         </div>
 
         <div class="user signupBx">
-          <div class="imgBx"><img src="./public/ img2.jpeg"/></div>
+        
           <div class="formBx">
             <form>
                <h2>Create an account</h2>
@@ -32,13 +32,23 @@
                <input type="password" placeholder="Create Password" /> 
                <input type="password" placeholder="Confirm Password" /> 
                <input type="submit" value="Sign Up" /> 
-               <p class="signup"> Already have an account? <a href="#">Sign in.</a></p>
+               <p class="signup"> Already have an account? <a href="#" onclick="toggleForm();">Sign in.</a></p>
             </form>
           </div>
+          <!-- 该图片存放的位置 影响展示的方式 -->
+          <div class="imgBx"><img src="./public/ img2.jpeg"/></div>
         </div>
 
 
       </div>
     </section>
+    <script>
+      function toggleForm(){
+        container=document.querySelector('.container');
+        container.classList.toggle('active');
+        section=document.querySelector('section');
+        section.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>
