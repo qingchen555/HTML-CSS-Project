@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>平行四边形</title>
+    <style>
+      /* 第一种方式：transform */
+      /* .div-wrapper {
+        background-color: bisque;
+        width: 100px;
+        height: 50px;
+        /* 对矩形进行斜向拉伸 */
+      /* transform: skewX(-45deg); */
+      /* 只倾斜容器，内容保持不变 */
+      /* } */
+      /* .div-wrapper > p {
+        transform: skewX(45deg);
+      } */
+
+      /* 第2种方式：*/
+      .div-wrapper {
+        position: relative;
+      }
+      .div-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transform: skew(-45deg);
+        background-color: rosybrown;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-wrapper">hello</div>
+  </body>
+</html>
