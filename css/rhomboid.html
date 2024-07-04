@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>菱形</title>
+    <style>
+      /* 方式1 */
+      /* .div-wrapper {
+        width: 400px;
+        transform: rotate(45deg);
+        overflow: hidden;
+        margin: 40px 40px;
+      }
+      .div-wrapper > img {
+        max-width: 142%;
+        transform: rotate(-45deg) scale(1.42);
+      } */
+
+      /* 方式2 :clip-path 借鉴了svg*/
+      img {
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        transition: 1s clip-path;
+      }
+      img:hover {
+        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-wrapper">
+      <img
+        src="https://img0.baidu.com/it/u=1033018635,7901815&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+      />
+    </div>
+  </body>
+</html>
