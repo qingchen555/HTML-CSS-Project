@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本换行</title>
+    <style>
+      /* 方式1 */
+      p {
+        width: 100px;
+        height: 100px;
+        word-break: break-all;
+        /*  normal： 按照浏览器默认的换行规则
+          keep-all:只能在半角空格或者连字符的地方换行;
+          break-all : 单词内换行*/
+        /*  在单词边界上进行换行，如果需要的话可以将单词拆分到新的行*/
+      }
+      /* 方式2 :clip-path 借鉴了svg*/
+      /* p {
+        width: 100px;
+        height: 100px;
+        word-wrap: break-word;
+        /* 在长单词或者url地址内部进行换行*/
+      /* } */
+    </style>
+  </head>
+  <body>
+    <div class="div-wrapper">
+      <p>
+        This paragraph contains a very long word:
+        thisisaveryveryveryveryveryverylongword. The long word will break and
+        wrap to the next line.
+      </p>
+    </div>
+  </body>
+</html>
