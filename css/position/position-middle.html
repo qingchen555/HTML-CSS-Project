@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position实现元素居中</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .div-wrapper {
+        position: relative;
+      }
+      .header {
+        width: 100px;
+        height: 100px;
+        background-color: palevioletred;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .middle {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .bottom {
+        width: 100px;
+        height: 100px;
+        background-color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-wrapper">
+      <div class="header">header</div>
+      <div class="middle">pls middle</div>
+      <div class="bottom">bottom</div>
+    </div>
+  </body>
+</html>
