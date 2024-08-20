@@ -9,6 +9,7 @@
 
 ### static
 
+文档流：dom 元素在排列时所占用的位置和空间
 元素在正常的文档流的位置， 对于 top,bottom, left, right, z-index 都是无效的
 
 ### relative
