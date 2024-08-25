@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position实现元素居中</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 300px;
+        background-color: antiquewhite;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      display: flex会将容器内的元素按照flex方式进行布局
+      align-items：容器内的元素按照相对于容器的垂直方向对齐 justify-content：
+      按照容器中主轴的对齐方式对齐
+    </p>
+    <div class="parent">
+      <div class="child">header</div>
+    </div>
+  </body>
+</html>

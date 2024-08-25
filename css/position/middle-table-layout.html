@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position实现元素居中</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 300px;
+        background-color: antiquewhite;
+
+        display: table-cell;
+        /* 此时子元素在垂直方向上居中 */
+        vertical-align: middle;
+        /* 让行内块级元素在水平居中 */
+        text-align: center;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: palegreen;
+
+        /* 父：display: table-cell ,   
+         */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>display: inline-block;</p>
+    <div class="parent">
+      <div class="child">header</div>
+    </div>
+  </body>
+</html>

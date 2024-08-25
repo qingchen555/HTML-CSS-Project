@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--开始标签-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>平行四边形</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .header {
+        height: 50px;
+        background-color: antiquewhite;
+        padding: 1px;
+      }
+
+      .middle ::after {
+        /* 清除浮动 */
+        /* overflow: hidden; */
+        /* clear: both; */
+        overflow: auto;
+      }
+
+      .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        background-color: aquamarine;
+      }
+
+      .right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: yellowgreen;
+      }
+
+      .footer {
+        background-color: blue;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 通过左右浮动设置三列布局 -->
+    <div class="box-wrapper">
+      <div class="header">header</div>
+      <div class="middle">
+        <!-- <div class="left">left</div> -->
+        <!-- 设置float right不会影响 浮动元素左侧元素的布局，所以需要将right和middle调换位置 -->
+        <div class="right">right hellohello hellohell hellohell hellohell</div>
+        <!-- <div class="middle">middle</div> -->
+      </div>
+
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
